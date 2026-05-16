@@ -1,0 +1,72 @@
+# =========================
+# Python cache / compiled
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# =========================
+# Build / packaging
+# =========================
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# =========================
+# Test / lint caches
+# =========================
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# OS files
+# =========================
+Thumbs.db
+.DS_Store
+
+# =========================
+# PyCharm / IntelliJ
+# =========================
+.idea/
+*.iml
+
+# =========================
+# Virtual Environments
+# =========================
+
+# Ignore ALL venv contents
+venv/
+.venv/
+env/
+
+# =========================
+# Environment variables
+# =========================
+.env
+.env.*
+
+# =========================
+# Raspberry Pi deployment
+# =========================
+
+# Ignore Windows-specific launchers/binaries
+*.exe
+*.dll
+*.pyd
+
+# Ignore VSCode settings if present
+.vscode/
+
+# Ignore temporary files
+*.tmp
+*.bak
+*.swp
