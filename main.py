@@ -1,19 +1,10 @@
-from WeatherCodes import WeatherCodes
 from WeatherReport import WeatherReport
-
-
-def main( r: WeatherReport ):
-    print( r.get_url() )
+from GeneratePNG import generate_png
+from PIL import Image
 
 if __name__ == '__main__':
     report = WeatherReport()
-    main( report )
+    report.generate_report()
 
-    code = WeatherCodes.from_id( 310 )
-    print( code )
-
-    code = WeatherCodes.from_id( 800 )
-    print( code )
-
-    code = WeatherCodes.from_id( 999 )
-    print( code )
+    img = generate_png( report )
+    img.show()
