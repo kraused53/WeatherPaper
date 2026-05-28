@@ -84,7 +84,7 @@ class WeatherData:
     def tomorrow_low_temperature(self) -> float:
         if 'daily' in self.data:
             if 'temperature_2m_min' in self.data['daily']:
-                return self.data['daily']['temperature_2m_min'][0]
+                return self.data['daily']['temperature_2m_min'][1]
         return 0
 
     def tomorrow_low_temperature_units(self) -> str:

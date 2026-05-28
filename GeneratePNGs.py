@@ -137,7 +137,7 @@ def create_tomorrow_png( wd: WeatherData ) -> None:
     add_middle_anchor_text_to_image(f"{datetime.fromtimestamp( wd.tomorrow_sunrise() ).strftime('%I:%M %p')}", FOOTER_LEFT_X, FOOTER_DATA_Y, 16, draw)
 
     # Add sunset time
-    add_middle_anchor_text_to_image("Sunrise", FOOTER_CENTER_LEFT_X, FOOTER_TITLE_Y, 16, draw)
+    add_middle_anchor_text_to_image("Sunset", FOOTER_CENTER_LEFT_X, FOOTER_TITLE_Y, 16, draw)
     add_middle_anchor_text_to_image(f"{datetime.fromtimestamp( wd.tomorrow_sunset() ).strftime('%I:%M %p')}", FOOTER_CENTER_LEFT_X, FOOTER_DATA_Y, 16, draw)
 
     # Add date
@@ -192,7 +192,7 @@ def create_today_png( wd: WeatherData ) -> None:
     add_middle_anchor_text_to_image(f"{datetime.fromtimestamp( wd.today_sunrise() ).strftime('%I:%M %p')}", FOOTER_LEFT_X, FOOTER_DATA_Y, 16, draw)
 
     # Add sunset time
-    add_middle_anchor_text_to_image("Sunrise", FOOTER_CENTER_LEFT_X, FOOTER_TITLE_Y, 16, draw)
+    add_middle_anchor_text_to_image("Sunset", FOOTER_CENTER_LEFT_X, FOOTER_TITLE_Y, 16, draw)
     add_middle_anchor_text_to_image(f"{datetime.fromtimestamp( wd.today_sunset() ).strftime('%I:%M %p')}", FOOTER_CENTER_LEFT_X, FOOTER_DATA_Y, 16, draw)
 
     # Add date
