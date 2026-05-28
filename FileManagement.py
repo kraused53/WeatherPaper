@@ -111,7 +111,7 @@ def get_forecast() -> str:
         PyLog.log( f"Loading forecast from {_filepath}" )
         json_str = load_forecast()
         json_data = json.loads( json_str )
-        if 'current' in json_str:
+        if 'current' in json_data:
             if 'time' in json_data['current']:
                 report_time = int(datetime.datetime.now().timestamp())
                 PyLog.log( f"Forecast is {int((report_time - int(json_data['current']['time'])) / 60)} minutes old" )
