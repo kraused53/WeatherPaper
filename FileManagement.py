@@ -110,6 +110,8 @@ def get_forecast() -> str:
     if Path( _filepath ).is_file():
         PyLog.log( f"Loading forecast from {_filepath}" )
         json_str = load_forecast()
+        if json_str == "ERROR" or json_str == None:
+            PyLog.error( "Could not load JSON file..." )
         json_data = json.loads( json_str )
         if 'current' in json_data:
             if 'time' in json_data['current']:
